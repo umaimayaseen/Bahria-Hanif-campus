@@ -1,13 +1,26 @@
 import React from 'react';
 
 function Profile() {
-    return (
-        <dua style={ { display:'flex',alignItem:'center',justifyContent:'center',position:'center',marginTop:'50px' ,padding:'20px'}}>
-            <manahil style={{padding:'40px', textAlign:'center'}}>Profile</manahil>
 
-            <h1 style={{ background: '#777'  }}>This is my First React File</h1>
+    const studentList = ["manahil", "dua", "mariyam", "fizza", 'imama']
+
+
+    return (
+        <dua style={{ padding: '40px', textAlign: 'center', margin: '20px' }}>
+
+            <ul style={{ listStyleType: 'none', padding: 0, margin: '20px' }} >
+                {studentList.map((student, index) => {
+                    return (
+                        <li key={index} style={{ background: '#d4d4d4', margin: '50px', borderRadius: '4px' }}> {student}</li>
+                    );
+                }
+                )}
+            </ul>
 
         </dua>
-            )
-    }
-            export default Profile;
+
+
+    )
+}
+export default Profile;
+
